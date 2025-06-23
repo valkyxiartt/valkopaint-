@@ -1,0 +1,81 @@
+@define-color   black  rgba(29, 28, 26, 0.75);
+@define-color   white  rgba(250, 248, 246, 0.75);
+@define-color   pink   rgba(253, 240, 247, 0.75);
+@define-color   none   rgba(0, 0, 0 , 0);
+
+* {
+  font-family: 'Maple Mono', Maple Mono;
+  font-size: 18px;
+}
+
+/* Window */
+window {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: @white;
+}
+
+/* Inner Box */
+#inner-box {
+  margin: 5px;
+  padding: 0px;
+  border: @black;
+  border-radius: 8px;
+}
+
+/* Outer Box */
+#outer-box {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 16px;
+  background-color: @none;
+}
+
+/* Input */
+#input {
+  margin: 20px 20px;
+  padding: 10px;
+  color: @black;
+  border: 0px solid @black;
+  box-shadow: none;
+  border-radius: 16px;
+  background-color: @none;
+}
+
+#input image {
+    border: solid 0px @black;
+    color: @black;
+}
+
+/* Text */
+#text {
+  margin: 5px;
+  border: @black;
+  color: @black;
+}
+
+#entry {
+  background-color: @none;
+}
+
+#entry arrow {
+  border: 10px;
+  color: @black;
+}
+
+/* Selected Entry */
+#entry:selected {
+  border: 2px solid @black;
+  box-shadow: none;
+  border-radius: 16px;
+  background-color: @none;
+}
+
+#entry:selected #text {
+  color: @black;
+}
+
+#entry:drop(active) {
+  background-color: @black !important;
+}
