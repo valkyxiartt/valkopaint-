@@ -83,17 +83,17 @@ element alternate.normal {
 }
 
 element selected.active {
-	background-color: transparent;
-	text-color: rgba (29, 28, 26, 0.7);
-	boder-color: rgba (29, 28, 26, 0.7);
+	background-color: rgba (29, 28, 26, 0.7);
+	text-color: rgba (250, 248, 246, 0.7);
+	border-color: transparent;
 	border: 2px solid;
-	border-radius: 10px;
+	border-radius: 12px;
 }
 
 element selected.normal {
-	background-color: transparent;
-	text-color: rgba (29, 28, 26, 0.7);
-	border-color: rgba (29, 28, 26, 0.7);
+	background-color: rgba (29, 28, 26, 0.7);
+	text-color: rgba (250, 248, 246, 0.7);
+	border-color: transparent;
 	border: 2px solid;
 	border-radius: 12px;
 }
