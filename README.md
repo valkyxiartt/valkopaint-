@@ -1,3 +1,7 @@
+__showcase of the rice first and foremost__
+
+https://streamable.com/k0x3mb
+
 __Dependencies__
 * hyprland
  * hyprpaper, hyprlock, hypridle
