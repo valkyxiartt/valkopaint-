@@ -1,0 +1,44 @@
+format = """
+[ ](fg:#FAF6F8)\
+[](#EBCEDA)\
+$username\
+[](bg:#E6E8C9 fg:#EBCEDA)\
+$directory\
+[](fg:#E6E8C9 bg:#C9D6E8)\
+$time\
+[](fg:#C9D6E8)\
+[ ](fg:#FAF6F8) 
+"""
+command_timeout = 5000
+add_newline=false
+
+[character]                            
+success_symbol = "[➜](bold green)"
+error_symbol = "[×](bold red)"
+
+[username]
+show_always = true
+style_user = "bg:#EBCEDA bold fg:#1D1C1A"
+style_root = "bg:#EBCEDA"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:#E6E8C9 bold fg:#1d1c1a"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#C9D6E8 bold fg:#1d1c1a"
+format = '[ $time ]($style)'
+
+[line_break]
+disabled = false
