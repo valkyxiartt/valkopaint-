@@ -1,6 +1,6 @@
 __showcase of the rice first and foremost__
 
-https://streamable.com/k0x3mb
+https://streamable.com/k0x3mb (i couldn't get a proper .mp4 to work sorry)
 
 __Dependencies__
 * hyprland
