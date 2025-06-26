@@ -1,0 +1,106 @@
+* {
+    font: "Maple Mono 12";
+    g-spacing: 10px;
+    g-margin: 0;
+    b-color: rgba (250, 248, 246, 0.7);
+    fg-color: rgba (29, 28, 26, 0.7);
+    fgp-color: rgba (29, 28, 26, 0.7);
+    b-radius: 16px;
+    g-padding: 8px;
+    hl-color: rgba (250, 248, 246, 0.7);
+    hlt-color: rgba (250, 248, 246, 0.7);
+    alt-color: rgba (250, 248, 246, 0.7);
+    wbg-color: rgba (29, 28, 26, 0.7);
+    w-border: 0px solid;
+    w-border-color: rgba (29, 28, 26, 0.7);
+    w-padding: 12px;
+}
+
+configuration {
+    modi: "drun";
+    show-icons: false;
+    display-drun: "valkyrie :3";
+    padding: 10px;
+    drun-display-format: " ➜ {name}";
+}
+
+listview {
+    columns: 1;
+    lines: 5;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: true;
+    scrollbar: false;
+    border-color: transparent;
+}
+
+window {
+    width: 400px;
+    border-radius: 16px;
+    background-color: rgba (250, 248, 246, 0.7);
+    border: transparent;
+    padding: 10px 10px;
+}
+
+prompt {
+    text-color: rgba (29, 28, 26, 0.7);
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: 10px;
+}
+
+entry {
+    placeholder: "";
+    text-color: rgba (29, 28, 26, 0.7);
+    placeholder-color: rgba (29, 28, 26, 0.7);
+}
+
+mainbox {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    children: ["inputbar", "listview", "message"];
+}
+
+element {
+    spacing: 10px;
+    margin: 0px;
+    padding: @g-padding;
+    border: 0px solid;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+	background-color: transparent;
+	text-color: rgba (29, 28, 26, 0.7);
+}
+
+element alternate.normal {
+	background-color: transparent;
+	text-color: rgba (29, 28, 26, 0.7);
+}
+
+element selected.active {
+	background-color: transparent;
+	text-color: rgba (29, 28, 26, 0.7);
+	boder-color: rgba (29, 28, 26, 0.7);
+	border: 2px solid;
+	border-radius: 10px;
+}
+
+element selected.normal {
+	background-color: transparent;
+	text-color: rgba (29, 28, 26, 0.7);
+	border-color: rgba (29, 28, 26, 0.7);
+	border: 2px solid;
+	border-radius: 12px;
+}
+
+message {
+    background-color: transparent;
+    border: 0px solid;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
