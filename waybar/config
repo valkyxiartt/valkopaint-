@@ -15,9 +15,9 @@
     "clock",
   ],  
   "modules-right": [
-    "network",
     "battery",
     "pulseaudio",
+    "network"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -33,12 +33,12 @@
   "spacing": 10
 },
   "clock": {
-    "format": "󰅐 {:%H:%M}",
+    "format": "{:%m/%d/%Y 󰅐 %H:%M}",
     "tooltip": false
   },
   "network": {
-    "format-wifi": "  {bandwidthDownBits}",
-    "format-ethernet": "  {bandwidthDownBits}",
+    "format-wifi": " ",
+    "on-double-click": "nm-applet",
     "format-disconnected": "󰤮  No Network",
     "interval": 5,
     "tooltip": false

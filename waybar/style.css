@@ -6,12 +6,14 @@
 * {
     font-family: MapleMono;
     color: @black;
-    background-color: @transparent;
     border-radius: 10px;
     border: 0.1em solid @transparent;
 }
 
-#network,
+window#waybar {
+	background-color: @transparent;
+}
+
 #battery,
 #clock {
     background-color: @white;
@@ -20,13 +22,18 @@
     border-radius: 10px;
 }
 
+#network {
+	background-color: @black;
+	color: @white;
+	padding: 0px 8px;
+	margin-right: 5px;
+}
+
 #pulseaudio {
-    background-color: @black;
-    color: @white;
+    background-color: @white;
     border: 2px solid @transparent;
     padding: 0px 10px;
     border-radius: 10px;
-    margin-right: 5px;
 }
 
 #tray {
@@ -34,6 +41,10 @@
 	border-radius: 10px;
 	margin-left: 5px;
 	padding: 0px 10px;
+}
+
+#tray button {
+	background-color: @white;
 }
 
 #workspaces {
