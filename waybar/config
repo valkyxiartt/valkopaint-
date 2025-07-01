@@ -1,14 +1,15 @@
 {
   "layer": "bot",
-  "spacing": 7,
+  "spacing": 4,
   "height": 0,
-  "margin-bottom": 0,
+  "margin-bottom": 3,
   "margin-top": 3,
-  "position": "top",
-  "margin-right": 3,
+  "position": "left",
+  "margin-right": 0,
   "margin-left": 3,
   "modules-left": [
     "tray",
+    "power-profiles-daemon",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -17,6 +18,7 @@
   "modules-right": [
     "battery",
     "pulseaudio",
+    "backlight",
     "network"
   ],
   "hyprland/workspaces": {
@@ -29,25 +31,39 @@
     "empty": "◇",
     "active":"❖"
   }},
+  "backlight": {
+  "format": " ☀ ",
+  "tooltip": false,
+  "format-alt": "☀ {percent}%",
+  "on-scroll-up": "brightnessctl s 1%+",
+  "on-scroll-down": "brightnessctl s 1%-",
+  "min": 10,
+  "max": 100
+  },
   "tray": {
   "spacing": 10
-},
+  },
   "clock": {
-    "format": "{:%m/%d/%Y 󰅐 %H:%M}",
+    "format": "{:%H
+%M}",
+    "format-alt": "  {:%m
+  %d
+ %Y} ",
     "tooltip": false
   },
   "network": {
     "format-wifi": " ",
-    "on-double-click": "nm-applet",
-    "format-disconnected": "󰤮  No Network",
+    "format-disconnected": "󰤮",
     "interval": 5,
     "tooltip": false
   },
   "pulseaudio": {
     "scroll-step": 5,
     "max-volume": 100,
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
+    "format": " {icon} ",
+    "format-alt": " {icon} {volume}% ",
+    "on-click-right": "pavucontrol",
+    "format-bluetooth": " {icon} {volume}% ",
     "format-icons": [
       "",
       "",
@@ -55,19 +71,29 @@
     ],
     "nospacing": 1,
     "format-muted": " ",
-    "on-click": "pavucontrol",
     "tooltip": false
   },
+    "power-profiles-daemon": {
+    "format": " {icon} ",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+    "default": "☘︎",
+    "performance": "",
+    "balanced": " ",
+    "power-saver": "☘︎"
+         },
+     },
   "battery": {
     "states": {
       "warning": 25,
       "critical": 10
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-plugged": "󰂄{capacity}%",
-    "format-alt": "{icon} {time}",
-    "format-full": "󱈑 {capacity}%",
+    "format": " {icon} ",
+    "format-charging": " 󰂄 ",
+    "format-plugged": " 󰂄 ",
+    "format-alt": " {icon} ",
+    "format-full": " 󱈑 ",
     "format-icons": [
       "󱊡",
       "󱊢",

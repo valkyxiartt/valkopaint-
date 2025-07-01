@@ -7,40 +7,49 @@
     font-family: MapleMono;
     color: @black;
     border-radius: 10px;
-    border: 0.1em solid @transparent;
+    margin: 0px 1px;
 }
 
 window#waybar {
 	background-color: @transparent;
+	border: 2px solid @transparent;
 }
 
 #battery,
+#power-profiles-daemon,
 #clock {
     background-color: @white;
-    border: 2px solid @transparent;
-    padding: 0px 10px;
+    border: none;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+#backlight {
+    background-color: @white;
+    border: none;
+    padding: 10px 4px;
     border-radius: 10px;
 }
 
 #network {
 	background-color: @black;
 	color: @white;
-	padding: 0px 8px;
-	margin-right: 5px;
+	padding: 10px 4px;
+	margin-bottom: 10px;
 }
 
 #pulseaudio {
     background-color: @white;
-    border: 2px solid @transparent;
-    padding: 0px 10px;
+    border: none;
+    padding: 10px 4px;
     border-radius: 10px;
 }
 
 #tray {
 	background-color: @black;
 	border-radius: 10px;
-	margin-left: 5px;
-	padding: 0px 10px;
+	margin-top: 10px;
+	padding: 10px 4px;
 }
 
 #tray button {
@@ -51,15 +60,17 @@ window#waybar {
 	background-color: @white;
 	border-radius: 10px;
 	border-left: none;
+	padding: 3px 4px;
 }
 
 #workspaces button {
-    padding: 0px 3px;
+    padding: 3px 4px;
     color: @transparent;
 }
 
 #workspaces button:hover {
-    padding: 0px 3px;
+    padding: 3px 4px;
+    border: 0.1em solid @transparent;
     background: rgba(250, 248, 246, 0.65);
     box-shadow: none;
     text-shadow: none;
